@@ -22,7 +22,7 @@
             <th>Especie</th>
             <th>Raza</th>
             <th>Edad</th>
-            <th>NOmbre del dueño</th>
+            <th>Nombre del dueño</th>
             <th>Teléfono</th>
             <th>Estado</th>
             <th></th>
@@ -31,20 +31,20 @@
         </thead>
         <tbody>
         <tr th:each="mas : ${mascota}">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td th:text="${mas.nombre}"></td>
+            <td th:text="${mas.especie}"></td>
+            <td th:text="${mas.raza}"></td>
+            <td th:text="${mas.edad}"> </td>
+            <td th:text="${mas.nombreDueno}"></td>
+            <td th:text="${mas.telefono}"></td>
+            <td th:text="${mas.estado}"></td>
             <td></td>
             <td>
-                <a th:href=""
+                <a
                    class="text-primary text-decoration-none">Editar</a>
             </td>
             <td>
-                <a th:href=""
+                <a
                    class="text-danger text-decoration-none"
                    onclick="return confirm('¿Estás seguro de que deseas borrar este empleado?');">Borrar</a>
             </td>
